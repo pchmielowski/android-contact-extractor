@@ -42,7 +42,7 @@ Name             |  Phone
         cQuery.filter(ICFilter.ONLY_PHONE);
         cQuery.build(new IContact() {
             @Override
-            public void onContactSuccess(List<CList> mList) {
+            public void onContactSuccess(List<CList> cList) {
                 if (cList != null && cList.size() > 0) {
                     CPhone cPhone = cList.getcPhone();
                     HashSet<String> home = cPhone.getHome();
@@ -65,7 +65,7 @@ Name             |  Phone
         cQuery.filter(ICFilter.ONLY_EMAIL);
         cQuery.build(new IContact() {
             @Override
-            public void onContactSuccess(List<CList> mList) {
+            public void onContactSuccess(List<CList> cList) {
                 if (cList != null && cList.size() > 0) {
                       CEmail cEmail = cList.getcEmail();
                       HashSet<String> home = cEmail.getHome();
